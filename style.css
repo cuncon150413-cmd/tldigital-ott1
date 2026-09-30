@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #17202a;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: min(400px, 100%);
+  background: white;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.10);
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #1769ff;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #68717c;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 16px 0 7px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d5dbe1;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1769ff;
+  box-shadow: 0 0 0 3px rgba(23,105,255,.12);
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 15px;
+  background: #1769ff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(.94);
+}
+
+.login-card form button {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.error {
+  min-height: 20px;
+  color: #d93025;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.topbar {
+  height: 64px;
+  padding: 0 24px;
+  background: white;
+  border-bottom: 1px solid #e5e8eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  font-size: 11px;
+  background: #e8f0ff;
+  color: #1769ff;
+  padding: 4px 7px;
+  border-radius: 999px;
+  margin-left: 7px;
+}
+
+.logout {
+  background: #eef1f4;
+  color: #29313a;
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.welcome {
+  margin-bottom: 26px;
+}
+
+.welcome p {
+  color: #68717c;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e6e9ec;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.panel .icon {
+  font-size: 30px;
+}
+
+.panel h2 {
+  margin: 12px 0 7px;
+}
+
+.panel p {
+  color: #68717c;
+  min-height: 42px;
+  line-height: 1.45;
+}
+
+.panel button {
+  margin-top: 8px;
+}
+
+@media (max-width: 500px) {
+  .login-card {
+    padding: 24px;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+}

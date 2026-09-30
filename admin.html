@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TL Digital - Quản trị</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+  <header class="topbar">
+    <div>
+      <strong>TL Digital</strong>
+      <span class="badge">ADMIN</span>
+    </div>
+    <button id="logoutBtn" class="logout">Đăng xuất</button>
+  </header>
+
+  <main class="dashboard">
+    <section class="welcome">
+      <h1>Trang quản trị</h1>
+      <p>Chào mừng, <strong id="adminUser"></strong> 👋</p>
+    </section>
+
+    <section class="cards">
+      <article class="panel">
+        <span class="icon">📺</span>
+        <h2>IPTV</h2>
+        <p>Quản lý nội dung IPTV và các mục hiển thị.</p>
+        <button onclick="alert('Khu vực IPTV đang được phát triển.')">Mở quản lý</button>
+      </article>
+
+      <article class="panel">
+        <span class="icon">🧩</span>
+        <h2>Scratch</h2>
+        <p>Quản lý liên kết các dự án Scratch.</p>
+        <button onclick="alert('Khu vực Scratch đang được phát triển.')">Mở quản lý</button>
+      </article>
+
+      <article class="panel">
+        <span class="icon">💻</span>
+        <h2>TurboWarp</h2>
+        <p>Quản lý liên kết và nội dung TurboWarp.</p>
+        <button onclick="alert('Khu vực TurboWarp đang được phát triển.')">Mở quản lý</button>
+      </article>
+
+      <article class="panel">
+        <span class="icon">⚙️</span>
+        <h2>Cài đặt</h2>
+        <p>Các thiết lập của trang quản trị.</p>
+        <button onclick="alert('Khu vực cài đặt đang được phát triển.')">Mở quản lý</button>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    if (sessionStorage.getItem("tl_admin_logged_in") !== "true") {
+      location.replace("login.html");
+    }
+
+    document.getElementById("adminUser").textContent =
+      sessionStorage.getItem("tl_admin_user") || "Admin";
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      sessionStorage.removeItem("tl_admin_logged_in");
+      sessionStorage.removeItem("tl_admin_user");
+      location.replace("login.html");
+    });
+  </script>
+</body>
+</html>
