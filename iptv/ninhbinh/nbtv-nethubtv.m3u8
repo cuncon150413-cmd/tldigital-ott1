@@ -1,0 +1,7 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=628000,RESOLUTION=426x240,CODECS="avc1.4d001e,mp4a.40.2"
+https://vtvgolive-ott3.vtvdigital.vn/live/ninhbinhtv/chunklist_0.m3u8
+
+#EXT-X-STREAM-INF:BANDWIDTH=1628000,RESOLUTION=854x480,CODECS="avc1.4d001f,mp4a.40.2"
+https://vtvgolive-ott3.vtvdigital.vn/live/ninhbinhtv/chunklist_1.m3u8
