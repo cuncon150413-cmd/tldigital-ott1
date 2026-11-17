@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STV Sơn La online</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #game {
+            width: 800px;
+            height: 600px;
+            max-width: 100%;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>STV Sơn La 320x244</h2>
+
+    <!-- Khung chứa EmulatorJS -->
+    <div id="game"></div>
+
+    <!-- Cấu hình đường dẫn ROM và Hệ máy -->
+    <script>
+        // Đường dẫn tới file ROM của bạn (Hỗ trợ cả link tuyệt đối hoặc tương đối)
+        window.EJS_player = "#game";
+        window.EJS_gameUrl = "https://cuncon150413-cmd.github.io/tldigital-ott1/iptv/lamdong/sonicknuckles.gen"; 
+        
+        // Xác định hệ máy (Core) giả lập. Đối với file .gen (SEGA Mega Drive / Genesis), dùng lõi 'segaMD'
+        window.EJS_core = "segaMD"; 
+
+        // Đường dẫn thư mục chứa các tệp lõi của EmulatorJS từ CDN chính thức
+        window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+    </script>
+
+    <!-- Tải tệp mã nguồn khởi động EmulatorJS -->
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
